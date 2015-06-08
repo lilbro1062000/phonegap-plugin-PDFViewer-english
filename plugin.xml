@@ -5,8 +5,8 @@
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
-  <name>PDFViewer</name>
-  <description>PDFViewer phonegap plugin</description>
+  <name>PDFViewer English</name>
+  <description>PDFViewer phonegap plugin - english</description>
   <author>Pierre-Emmanuel Bois</author>
   <email>pebois@kernix.com</email>
   <license>MIT</license>
