@@ -17,13 +17,13 @@
     if (url != nil && [url length] > 0) {
         dispatch_async(dispatch_get_main_queue(), ^{
             // NSURL *fileURL = [NSURL URLWithString:url];
-            NSString *fileURL = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"www/%@",url];
+            NSString *fileURL = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat: @"www/%@",url]];
             if (fileURL) {
                 pdfviewerViewController = [[UIStoryboard storyboardWithName:@"PDFViewerViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"PDFViewer"];
                 UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:pdfviewerViewController];
                 [pdfviewerViewController setPlugin:self];
                 [pdfviewerViewController setCommand:command];
-                [pdfviewerViewController setFileURL:fileURL];
+                pdfviewerViewController setFileURL:[NSURL URLWithString: fileURL ]];
                 if (fileTitle != nil && [fileTitle length] > 0) {
                     [pdfviewerViewController setFileTitle:fileTitle];
                 }
