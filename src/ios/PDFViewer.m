@@ -23,7 +23,7 @@
                 UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:pdfviewerViewController];
                 [pdfviewerViewController setPlugin:self];
                 [pdfviewerViewController setCommand:command];
-                pdfviewerViewController setFileURL:[NSURL URLWithString: fileURL ]];
+                [pdfviewerViewController setFileURL:[NSURL URLWithString: fileURL ]];
                 if (fileTitle != nil && [fileTitle length] > 0) {
                     [pdfviewerViewController setFileTitle:fileTitle];
                 }
